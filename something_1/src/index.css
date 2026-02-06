@@ -1,68 +1,93 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eaeded;
+}
+
+/* HEADER */
+.amazon-header {
+  background: #131921;
+  padding: 10px 20px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  gap: 20px;
+  color: white;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.logo {
+  color: #f08804;
+  font-weight: bold;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.search {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 22px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #f08804;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.amazon-product {
+  background: white;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.amazon-product img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.amazon-product button {
+  background: #ffd814;
+  border: none;
+  padding: 8px;
+  width: 100%;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  margin-top: 10px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* CART */
+.amazon-cart {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.cart-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.cart-row img {
+  width: 100px;
+}
+
+.qty button {
+  padding: 4px 8px;
 }
